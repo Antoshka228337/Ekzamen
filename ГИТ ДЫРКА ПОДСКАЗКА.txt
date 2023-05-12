@@ -1,0 +1,26 @@
+echo "url=https://github.com" | git credential reject //для хуйни что бы нормально было
+git init 
+git add .
+git commit -m "NAZVANIE"
+git branch -M main
+git remote add origin SSILKA NA GIT
+git push -u origin main
+
+если вот это говно
+git push -u origin main
+	To https://github.com/Yana103/UchebnayaPraktika05.git
+ 	  ! [rejected]        main -> main (fetch first)
+	error: failed to push some refs to 'https://github.com/Yana103/UchebnayaPraktika05.git'
+	hint: Updates were rejected because the remote contains work that you do
+	hint: not have locally. This is usually caused by another repository pushing
+	hint: to the same ref. You may want to first integrate the remote changes
+	hint: (e.g., 'git pull ...') before pushing again.
+	hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+то
+git fetch origin main
+git merge origin main
+git fetch origin main:tmp
+git rebase tmp
+git push origin HEAD:main
+
+если что то другое хуйню сдалали значит переустанавливайте гит нахуй
